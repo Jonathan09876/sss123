@@ -7,6 +7,5 @@
         }
     ],
     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-    "cleanUrls": true,
-    "framework":"react"
+    "cleanUrls": true
 }
