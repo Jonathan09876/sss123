@@ -6,5 +6,7 @@
             "use": "@vercel/react"
         }
     ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+    "cleanUrls": true,
+    "framework":"react"
 }
