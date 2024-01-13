@@ -31,8 +31,9 @@ const File_list = () => {
      }
     fetch("https://deploy-server-mu.vercel.app//api/file/upload", { // Your POST endpoint
       method: 'POST',
+      credentials: 'include',
+      headers:config.headers,
       body: formdata,
-      headers:config.headers
     }).then(
      dispatch(FilelistAction())
     ).catch(
