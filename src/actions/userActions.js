@@ -39,7 +39,7 @@ export const login = (email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      'https://deploy-server-mu.vercel.app//api/users/login',
+      'https://deploy-server-mu.vercel.app/api/users/login',
       { email, password },
       config
     )
