@@ -29,7 +29,7 @@ const File_list = () => {
         Authorization: `Bearer ${userInfo.token}`,
       },
      }
-    fetch("https://deploy-server-mu.vercel.app//api/file/upload", { // Your POST endpoint
+    fetch("https://deploy-server-mu.vercel.app/api/file/upload", { // Your POST endpoint
       method: 'POST',
       credentials: 'include',
       headers:config.headers,
