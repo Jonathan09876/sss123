@@ -1,11 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/react"
-        }
-    ],
+
     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-    "cleanUrls": true
+    // "cleanUrls": true
 }
