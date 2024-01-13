@@ -40,7 +40,7 @@ export const createProjectAction = (payload) => async (dispatch, getState) => {
       },
     }
     
-    const { data } = await axios.post(`http://localhost:5000/api/projects`, payload, config,)
+    const { data } = await axios.post(`https://deploy-server-mu.vercel.app/api/projects`, payload, config,)
 
     dispatch({
       type: PROJECT_CREATE_SUCCESS,
@@ -79,7 +79,7 @@ export const updateProjectAction = (project) => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.patch(`http://localhost:5000/api/projects/${project._id}`, project, config)
+    const { data } = await axios.patch(`https://deploy-server-mu.vercel.app/api/projects/${project._id}`, project, config)
 
     dispatch({
       type: PROJECT_UPDATE_SUCCESS,
@@ -118,7 +118,7 @@ export const listProjectAction = () => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get(`http://localhost:5000/api/projects`, config)
+    const { data } = await axios.get(`https://deploy-server-mu.vercel.app/api/projects`, config)
     dispatch({
       type: PROJECT_LIST_SUCCESS,
       payload: data.projects,
@@ -154,7 +154,7 @@ export const getProjectDetails = (id) => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get(`http://localhost:5000/api/projects/${id}`, config)
+    const { data } = await axios.get(`https://deploy-server-mu.vercel.app/api/projects/${id}`, config)
 
     dispatch({
       type: PROJECT_DETAILS_SUCCESS,
@@ -192,7 +192,7 @@ export const deleteProjectAction = (id) => async (dispatch, getState) => {
       },
     }
 
-    await axios.delete(`http://localhost:5000/api/projects/${id}`, config)
+    await axios.delete(`https://deploy-server-mu.vercel.app/api/projects/${id}`, config)
 
     dispatch({ type: PROJECT_DELETE_SUCCESS })
   } catch (error) {

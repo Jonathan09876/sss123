@@ -29,7 +29,7 @@ export const getCompanyListAction= () => async (dispatch, getState) =>{
     },
   }
   
-  const { data } = await axios.get(`http://localhost:5000/api/company/getdata`, config,)
+  const { data } = await axios.get(`https://deploy-server-mu.vercel.app/api/company/getdata`, config,)
   dispatch({
     type: COMPANY_LIST_SUCCESS,
     payload: data,
@@ -64,7 +64,7 @@ export const addCompnayAction = (payload) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.post(`http://localhost:5000/api/company/add`, {body:payload}, config,)
+    const { data } = await axios.post(`https://deploy-server-mu.vercel.app/api/company/add`, {body:payload}, config,)
 
     dispatch({
       type: COMPANY_ADD_SUCCESS,

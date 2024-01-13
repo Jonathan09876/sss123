@@ -28,7 +28,7 @@ export const createFileAction = (payload) => async (dispatch, getState) => {
       },
     }
    
-    const { data } = await axios.post(`http://localhost:5000/api/file/create`, payload, config,)
+    const { data } = await axios.post(`https://deploy-server-mu.vercel.app/api/file/create`, payload, config,)
 
     dispatch({
       type: FILE_CREATE_SUCCESS,
@@ -67,7 +67,7 @@ export const createFileAction = (payload) => async (dispatch, getState) => {
 //       },
 //     }
 
-//     const { data } = await axios.patch(`http://localhost:5000/api/projects/${project._id}`, project, config)
+//     const { data } = await axios.patch(`https://deploy-server-mu.vercel.app/api/projects/${project._id}`, project, config)
 
 //     dispatch({
 //       type: PROJECT_UPDATE_SUCCESS,
@@ -105,7 +105,7 @@ export const FilelistAction = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.post(`http://localhost:5000/api/file/list`, '',config,)
+    const { data } = await axios.post(`https://deploy-server-mu.vercel.app/api/file/list`, '',config,)
     dispatch({
       type: FILE_LIST_SUCCESS,
       payload: data.filelist,
@@ -141,7 +141,7 @@ export const FilelistAction = () => async (dispatch, getState) => {
 //       },
 //     }
 
-//     const { data } = await axios.get(`http://localhost:5000/api/projects/${id}`, config)
+//     const { data } = await axios.get(`https://deploy-server-mu.vercel.app/api/projects/${id}`, config)
 
 //     dispatch({
 //       type: PROJECT_DETAILS_SUCCESS,
@@ -179,7 +179,7 @@ export const FilelistAction = () => async (dispatch, getState) => {
 //       },
 //     }
 
-//     await axios.delete(`http://localhost:5000/api/projects/${id}`, config)
+//     await axios.delete(`https://deploy-server-mu.vercel.app/api/projects/${id}`, config)
 
 //     dispatch({ type: PROJECT_DELETE_SUCCESS })
 //   } catch (error) {

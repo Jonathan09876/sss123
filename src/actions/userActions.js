@@ -84,7 +84,7 @@ export const registerAction = (name, email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      'http://localhost:5000/api/users',
+      'https://deploy-server-mu.vercel.app/api/users',
       { name, email, password },
       config
     )
