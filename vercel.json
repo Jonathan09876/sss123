@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "*.js",
-            "use": "@vercel/node"
+            "use": "@vercel/react"
         }
     ],
     "routes": [
@@ -11,5 +11,8 @@
             "src": "/(.*)",
             "dest": "/"
         }
+    ],
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
     ]
 }
